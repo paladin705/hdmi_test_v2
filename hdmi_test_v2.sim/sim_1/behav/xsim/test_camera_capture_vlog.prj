@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hdmi_test_v2.gen/sources_1/ip/clk_wiz_0" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/camera_capture.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/ov7670.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/rgb565_to_rgb888.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/rgb888_to_gray.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/test_camera_capture.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../hdmi_test_v2.gen/sources_1/ip/clk_wiz_0" \
+"test_time_impl.v" \
+"../../../../../hdmi_test_v2.srcs/sim_1/new/test.v" \
+
+# Do not sort compile order
+nosort

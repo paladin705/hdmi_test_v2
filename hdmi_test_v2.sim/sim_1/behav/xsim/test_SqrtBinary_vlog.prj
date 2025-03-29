@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hdmi_test_v2.gen/sources_1/ip/sys_pll" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSM.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMA.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMB.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMC.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMD.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSME.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/SqrtBinary.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/test_SqrtBinary.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
