@@ -1,0 +1,818 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep  4 02:46:18 2022
+# Process ID: 6076
+# Current directory: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/top.vds
+# Journal file: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tfgg676-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4064
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1010.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sys_pll' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/sys_pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sys_pll' (1#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/sys_pll_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'video_processing' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cmd_controller' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/cmd_controller.v:23]
+	Parameter CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter UART_BAUD bound to: 9600 - type: integer 
+	Parameter MSB_FIRST bound to: 0 - type: integer 
+	Parameter DEFAULT_SOBEL_THRESHOLD bound to: 8'b01100100 
+	Parameter ERROR_MSG_TYPE bound to: 1'b0 
+	Parameter OK_MSG_TYPE bound to: 1'b1 
+	Parameter CMD_TYPE_SCCB bound to: 8'b00000000 
+	Parameter CMD_TYPE_SOBEL bound to: 8'b00000001 
+	Parameter CMD_TYPE_VIDEO_MODE bound to: 8'b00000010 
+	Parameter state_size bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter READ_HEADER bound to: 3'b001 
+	Parameter READ_ADDR bound to: 3'b010 
+	Parameter READ_DATA bound to: 3'b011 
+	Parameter CHECK bound to: 3'b100 
+	Parameter SCCB_WAIT bound to: 3'b101 
+	Parameter SEND_DATA bound to: 3'b110 
+	Parameter TX_WAIT bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'uart' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:23]
+	Parameter CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter UART_BAUD bound to: 9600 - type: integer 
+	Parameter MSB_FIRST bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_generator' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/baud_generator.v:23]
+	Parameter clk_freq bound to: 24000000 - type: integer 
+	Parameter baud bound to: 9600 - type: integer 
+	Parameter acc_width bound to: 16 - type: integer 
+	Parameter baud_gen_inc bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_generator' (2#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/baud_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'baud_generator__parameterized0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/baud_generator.v:23]
+	Parameter clk_freq bound to: 24000000 - type: integer 
+	Parameter baud bound to: 153600 - type: integer 
+	Parameter acc_width bound to: 16 - type: integer 
+	Parameter baud_gen_inc bound to: 419 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_generator__parameterized0' (2#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/baud_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart_tx.v:23]
+	Parameter state_size bound to: 1 - type: integer 
+	Parameter IDLE bound to: 1'b0 
+	Parameter TRANSMIT_DATA bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart_tx.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (3#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart_tx.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart_rx.v:23]
+	Parameter state_size bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter START_BIT bound to: 3'b001 
+	Parameter DATA bound to: 3'b010 
+	Parameter STOP_BIT bound to: 3'b011 
+	Parameter SAVE_DATA bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (4#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart_rx.v:23]
+WARNING: [Synth 8-7071] port 'rx_sot_o' of module 'uart_rx' is unconnected for instance 'uart_rx' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:95]
+WARNING: [Synth 8-7071] port 'rx_eot_o' of module 'uart_rx' is unconnected for instance 'uart_rx' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:95]
+WARNING: [Synth 8-7071] port 'rx_error_o' of module 'uart_rx' is unconnected for instance 'uart_rx' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:95]
+WARNING: [Synth 8-7023] instance 'uart_rx' of module 'uart_rx' has 11 connections declared, but only 8 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (5#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/cmd_controller.v:241]
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/cmd_controller.v:312]
+INFO: [Synth 8-6155] done synthesizing module 'cmd_controller' (6#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/cmd_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'camera_controller' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sccb_master' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/sccb_master.v:23]
+	Parameter SYS_CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter SCCB_CLK_FREQ bound to: 10000 - type: integer 
+	Parameter SCCB_CLK_GEN_ACC_WIDTH bound to: 16 - type: integer 
+	Parameter SCCB_CLK_GEN_INC bound to: 109 - type: integer 
+	Parameter state_size bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter PHASE bound to: 3'b010 
+	Parameter PHASE_ACK bound to: 3'b011 
+	Parameter STOP bound to: 3'b100 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/sccb_master.v:326]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_master' (7#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/sccb_master.v:23]
+WARNING: [Synth 8-7071] port 'busy_o' of module 'sccb_master' is unconnected for instance 'sccb_master' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_controller.v:135]
+WARNING: [Synth 8-7071] port 'rdata_o' of module 'sccb_master' is unconnected for instance 'sccb_master' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_controller.v:135]
+WARNING: [Synth 8-7023] instance 'sccb_master' of module 'sccb_master' has 16 connections declared, but only 14 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_controller.v:135]
+INFO: [Synth 8-6157] synthesizing module 'camera_init' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_init.v:23]
+	Parameter CAMERA_INIT_MESSAGES_LENGTH bound to: 80 - type: integer 
+	Parameter CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter START_PAUSE_MS bound to: 1000 - type: integer 
+	Parameter TX_PAUSE_MS bound to: 1 - type: integer 
+	Parameter state_size bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter START_PAUSE bound to: 3'b001 
+	Parameter SEND_MESSAGE bound to: 3'b010 
+	Parameter MESSAGE_TX_WAIT bound to: 3'b011 
+	Parameter INC_MESSAGE_ADDR bound to: 3'b100 
+	Parameter TX_PAUSE bound to: 3'b101 
+	Parameter END_PAUSE bound to: 3'b110 
+	Parameter CAMERA_INIT_DONE bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'timer' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter PAUSE_MS bound to: 1000 - type: integer 
+	Parameter TIMER_VAL bound to: 24000000 - type: integer 
+	Parameter TIMER_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer' (8#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer__parameterized0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 24000000 - type: integer 
+	Parameter PAUSE_MS bound to: 1 - type: integer 
+	Parameter TIMER_VAL bound to: 24000 - type: integer 
+	Parameter TIMER_WIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer__parameterized0' (8#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_init.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'camera_init' (9#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_init.v:23]
+INFO: [Synth 8-6157] synthesizing module 'camera_init_messages_rom' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_init_messages_rom.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'camera_init_messages_rom' (10#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_init_messages_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'camera_capture' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_capture.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'camera_capture' (11#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_capture.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'camera_controller' (12#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/camera_controller.v:23]
+WARNING: [Synth 8-7071] port 'sor_o' of module 'camera_controller' is unconnected for instance 'camera_controller' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:129]
+WARNING: [Synth 8-7071] port 'eor_o' of module 'camera_controller' is unconnected for instance 'camera_controller' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:129]
+WARNING: [Synth 8-7023] instance 'camera_controller' of module 'camera_controller' has 30 connections declared, but only 28 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:129]
+INFO: [Synth 8-6157] synthesizing module 'rgb565_to_rgb888' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/rgb565_to_rgb888.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'rgb565_to_rgb888' (13#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/rgb565_to_rgb888.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rgb888_to_gray' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/rgb888_to_gray.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'rgb888_to_gray' (14#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/rgb888_to_gray.v:23]
+INFO: [Synth 8-6157] synthesizing module 'write_fifo_interface' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/write_fifo_interface.v:23]
+	Parameter state_size bound to: 1 - type: integer 
+	Parameter IDLE bound to: 1'b0 
+	Parameter WRITE_DATA bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/write_fifo_interface.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'write_fifo_interface' (15#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/write_fifo_interface.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:269]
+INFO: [Synth 8-6157] synthesizing module 'image_gaussian_filter' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/image_gaussian_filter.v:23]
+	Parameter H bound to: 640 - type: integer 
+	Parameter W bound to: 480 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'gaussian_window' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/gaussian_window.v:23]
+	Parameter H bound to: 640 - type: integer 
+	Parameter W bound to: 480 - type: integer 
+	Parameter MAX_H bound to: 639 - type: integer 
+	Parameter MAX_W bound to: 479 - type: integer 
+	Parameter H_COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter W_COUNTER_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'gaussian_window_shift_ram' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/gaussian_window_shift_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'gaussian_window_shift_ram' (16#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/gaussian_window_shift_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'gaussian_window' (17#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/gaussian_window.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gaussian_filter' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/gaussian_filter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'gaussian_filter' (18#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/gaussian_filter.v:23]
+WARNING: [Synth 8-6104] Input port 'gray8_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/image_gaussian_filter.v:91]
+WARNING: [Synth 8-6104] Input port 'gray_data_rdy_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/image_gaussian_filter.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'image_gaussian_filter' (19#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/image_gaussian_filter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sobel_threshold_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/sobel_threshold_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sobel_threshold_fifo' (20#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/sobel_threshold_fifo_stub.v:6]
+WARNING: [Synth 8-7071] port 'full' of module 'sobel_threshold_fifo' is unconnected for instance 'sobel_threshold_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:291]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'sobel_threshold_fifo' is unconnected for instance 'sobel_threshold_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:291]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'sobel_threshold_fifo' is unconnected for instance 'sobel_threshold_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:291]
+WARNING: [Synth 8-7023] instance 'sobel_threshold_fifo' of module 'sobel_threshold_fifo' has 11 connections declared, but only 8 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:291]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:326]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/edge_detector.v:23]
+	Parameter H bound to: 638 - type: integer 
+	Parameter W bound to: 478 - type: integer 
+	Parameter DEFAULT_THRESHOLD bound to: 8'b00100101 
+INFO: [Synth 8-6157] synthesizing module 'window' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/window.v:23]
+	Parameter H bound to: 638 - type: integer 
+	Parameter W bound to: 478 - type: integer 
+	Parameter MAX_H bound to: 637 - type: integer 
+	Parameter MAX_W bound to: 477 - type: integer 
+	Parameter H_COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter W_COUNTER_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'window_shift_ram' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/window_shift_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'window_shift_ram' (21#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/window_shift_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'window' (22#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/window.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sobel_edge_detector' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/sobel_edge_detector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SqrtBinary' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/SqrtBinary.v:3]
+	Parameter SIZE bound to: 22 - type: integer 
+	Parameter HALF_SIZE bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CSMC' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMC.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSMC' (23#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMC.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSMA' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMA.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSMA' (24#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMA.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSMB' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSMB' (25#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMB.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSM' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSM.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSM' (26#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSMD' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMD.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSMD' (27#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSMD.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CSME' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSME.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'CSME' (28#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/CSME.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SqrtBinary' (29#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/SqrtBinary.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sobel_edge_detector' (30#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/sobel_edge_detector.v:23]
+WARNING: [Synth 8-6104] Input port 'is_edge_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/edge_detector.v:108]
+WARNING: [Synth 8-6104] Input port 'data_rdy_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/edge_detector.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (31#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/edge_detector.v:23]
+WARNING: [Synth 8-6104] Input port 'edge_data_rdy_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:340]
+WARNING: [Synth 8-6104] Input port 'is_edge_o' has an internal driver [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:341]
+INFO: [Synth 8-6155] done synthesizing module 'video_processing' (32#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/video_processing.v:23]
+INFO: [Synth 8-6157] synthesizing module 'display_demo_dvi' [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:17]
+INFO: [Synth 8-6157] synthesizing module 'read_fifo_interface' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_fifo_interface.v:23]
+	Parameter H bound to: 640 - type: integer 
+	Parameter W bound to: 480 - type: integer 
+	Parameter MAX_ADDR bound to: 307199 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+	Parameter state_size bound to: 1 - type: integer 
+	Parameter IDLE bound to: 1'b0 
+	Parameter SET_DATA bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_fifo_interface.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'read_fifo_interface' (33#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_fifo_interface.v:23]
+WARNING: [Synth 8-7071] port 'eof_o' of module 'read_fifo_interface' is unconnected for instance 'read_fifo_interface' [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:123]
+WARNING: [Synth 8-7023] instance 'read_fifo_interface' of module 'read_fifo_interface' has 10 connections declared, but only 9 given [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:123]
+INFO: [Synth 8-6157] synthesizing module 'read_edge_fifo_interface' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_edge_fifo_interface.v:23]
+	Parameter H bound to: 636 - type: integer 
+	Parameter W bound to: 476 - type: integer 
+	Parameter RESIZE_H bound to: 640 - type: integer 
+	Parameter RESIZE_W bound to: 480 - type: integer 
+	Parameter MAX_ADDR bound to: 307199 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+	Parameter state_size bound to: 1 - type: integer 
+	Parameter IDLE bound to: 1'b0 
+	Parameter SET_DATA bound to: 1'b1 
+	Parameter MAX_H bound to: 635 - type: integer 
+	Parameter MAX_W bound to: 475 - type: integer 
+	Parameter H_COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter W_COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter END_ROW_INC bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_edge_fifo_interface.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'read_edge_fifo_interface' (34#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/read_edge_fifo_interface.v:23]
+WARNING: [Synth 8-7071] port 'eof_o' of module 'read_edge_fifo_interface' is unconnected for instance 'read_edge_fifo_interface' [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:155]
+WARNING: [Synth 8-7023] instance 'read_edge_fifo_interface' of module 'read_edge_fifo_interface' has 10 connections declared, but only 9 given [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:155]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_framebuffer' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/hdmi_framebuffer.v:23]
+	Parameter H bound to: 640 - type: integer 
+	Parameter W bound to: 480 - type: integer 
+	Parameter MAX_ADDR bound to: 307199 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+	Parameter state_size bound to: 2 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WAIT_WDATA bound to: 2'b01 
+	Parameter SET_DATA bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (35#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_framebuffer' (36#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/hdmi_framebuffer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_edge_framebuffer' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/hdmi_edge_framebuffer.v:23]
+	Parameter H bound to: 640 - type: integer 
+	Parameter W bound to: 480 - type: integer 
+	Parameter MAX_ADDR bound to: 307199 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+	Parameter state_size bound to: 2 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WAIT_WDATA bound to: 2'b01 
+	Parameter SET_DATA bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'edge_framebuffer_ram' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/edge_framebuffer_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'edge_framebuffer_ram' (37#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/edge_framebuffer_ram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_edge_framebuffer' (38#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/hdmi_edge_framebuffer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'display_timings' [D:/User/FPGA Projects/hdmi_test_v2/display_timings.v:10]
+	Parameter H_RES bound to: 640 - type: integer 
+	Parameter V_RES bound to: 480 - type: integer 
+	Parameter H_FP bound to: 16 - type: integer 
+	Parameter H_SYNC bound to: 96 - type: integer 
+	Parameter H_BP bound to: 48 - type: integer 
+	Parameter V_FP bound to: 10 - type: integer 
+	Parameter V_SYNC bound to: 2 - type: integer 
+	Parameter V_BP bound to: 33 - type: integer 
+	Parameter H_POL bound to: 0 - type: integer 
+	Parameter V_POL bound to: 0 - type: integer 
+	Parameter H_STA bound to: 32'sb11111111111111111111111101100000 
+	Parameter HS_STA bound to: 32'sb11111111111111111111111101110000 
+	Parameter HS_END bound to: 32'sb11111111111111111111111111010000 
+	Parameter HA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter HA_END bound to: 32'sb00000000000000000000001001111111 
+	Parameter V_STA bound to: 32'sb11111111111111111111111111010011 
+	Parameter VS_STA bound to: 32'sb11111111111111111111111111011101 
+	Parameter VS_END bound to: 32'sb11111111111111111111111111011111 
+	Parameter VA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter VA_END bound to: 32'sb00000000000000000000000111011111 
+INFO: [Synth 8-6155] done synthesizing module 'display_timings' (39#1) [D:/User/FPGA Projects/hdmi_test_v2/display_timings.v:10]
+WARNING: [Synth 8-567] referenced signal 'gray8_rdata' should be on the sensitivity list [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:285]
+WARNING: [Synth 8-567] referenced signal 'is_edge_rdata' should be on the sensitivity list [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:285]
+INFO: [Synth 8-6157] synthesizing module 'dvi_generator' [D:/User/FPGA Projects/hdmi_test_v2/dvi_generator.v:8]
+INFO: [Synth 8-6157] synthesizing module 'tmds_encoder_dvi' [D:/User/FPGA Projects/hdmi_test_v2/tmds_encoder_dvi.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_encoder_dvi' (40#1) [D:/User/FPGA Projects/hdmi_test_v2/tmds_encoder_dvi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'async_reset' [D:/User/FPGA Projects/hdmi_test_v2/async_reset.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'async_reset' (41#1) [D:/User/FPGA Projects/hdmi_test_v2/async_reset.v:8]
+INFO: [Synth 8-6157] synthesizing module 'serializer_10to1' [D:/User/FPGA Projects/hdmi_test_v2/serializer_10to1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (42#1) [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (42#1) [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:50398]
+INFO: [Synth 8-6155] done synthesizing module 'serializer_10to1' (43#1) [D:/User/FPGA Projects/hdmi_test_v2/serializer_10to1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'dvi_generator' (44#1) [D:/User/FPGA Projects/hdmi_test_v2/dvi_generator.v:8]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:46332]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (45#1) [D:/Programs/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:46332]
+INFO: [Synth 8-6155] done synthesizing module 'display_demo_dvi' (46#1) [D:/User/FPGA Projects/hdmi_test_v2/display_demo_dvi.v:17]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (47#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/fifo_generator_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'fifo_generator_0' is unconnected for instance 'fifo_generator_0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:194]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'fifo_generator_0' is unconnected for instance 'fifo_generator_0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:194]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'fifo_generator_0' is unconnected for instance 'fifo_generator_0' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:194]
+WARNING: [Synth 8-7023] instance 'fifo_generator_0' of module 'fifo_generator_0' has 12 connections declared, but only 9 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:194]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/edge_detector_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_fifo' (48#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/.Xil/Vivado-6076-DESKTOP-SDG9QHK/realtime/edge_detector_fifo_stub.v:6]
+WARNING: [Synth 8-7071] port 'full' of module 'edge_detector_fifo' is unconnected for instance 'edge_detector_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:210]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'edge_detector_fifo' is unconnected for instance 'edge_detector_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:210]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'edge_detector_fifo' is unconnected for instance 'edge_detector_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:210]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'edge_detector_fifo' is unconnected for instance 'edge_detector_fifo' [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:210]
+WARNING: [Synth 8-7023] instance 'edge_detector_fifo' of module 'edge_detector_fifo' has 12 connections declared, but only 8 given [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:210]
+INFO: [Synth 8-6155] done synthesizing module 'top' (49#1) [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1010.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1010.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1010.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1010.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'fifo_generator_0'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'fifo_generator_0'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/gaussian_window_shift_ram/gaussian_window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_1'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/gaussian_window_shift_ram/gaussian_window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_1'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/gaussian_window_shift_ram/gaussian_window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_2'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/gaussian_window_shift_ram/gaussian_window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_2'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll/sys_pll_in_context.xdc] for cell 'sys_pll'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll/sys_pll_in_context.xdc] for cell 'sys_pll'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'display_demo_dvi/hdmi_framebuffer/framebuffer_ram'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'display_demo_dvi/hdmi_framebuffer/framebuffer_ram'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/window_shift_ram/window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/edge_detector/window/window_shift_ram_1'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/window_shift_ram/window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/edge_detector/window/window_shift_ram_1'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/window_shift_ram/window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/edge_detector/window/window_shift_ram_2'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/window_shift_ram/window_shift_ram/window_shift_ram_in_context.xdc] for cell 'video_processing/edge_detector/window/window_shift_ram_2'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/edge_framebuffer_ram/edge_framebuffer_ram/edge_framebuffer_ram_in_context.xdc] for cell 'display_demo_dvi/hdmi_edge_framebuffer/edge_framebuffer_ram'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/edge_framebuffer_ram/edge_framebuffer_ram/edge_framebuffer_ram_in_context.xdc] for cell 'display_demo_dvi/hdmi_edge_framebuffer/edge_framebuffer_ram'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/edge_detector_fifo/edge_detector_fifo/edge_detector_fifo_in_context.xdc] for cell 'edge_detector_fifo'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/edge_detector_fifo/edge_detector_fifo/edge_detector_fifo_in_context.xdc] for cell 'edge_detector_fifo'
+Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sobel_threshold_fifo/sobel_threshold_fifo/sobel_threshold_fifo_in_context.xdc] for cell 'video_processing/sobel_threshold_fifo'
+Finished Parsing XDC File [d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sobel_threshold_fifo/sobel_threshold_fifo/sobel_threshold_fifo_in_context.xdc] for cell 'video_processing/sobel_threshold_fifo'
+Parsing XDC File [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'sys_pll/inst/clk_in1_sys_pll'. [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc:14]
+WARNING: [Vivado 12-507] No nets matched 'pclk_i_IBUF'. [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc:88]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc:144]
+WARNING: [Vivado 12-508] No pins matched 'sys_pll/inst/mmcm_adv_inst/CLKOUT2'. [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc:147]
+WARNING: [Vivado 12-508] No pins matched 'sys_pll/inst/mmcm_adv_inst/CLKOUT2'. [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc:149]
+Finished Parsing XDC File [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1060.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1060.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1060.746 ; gain = 50.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1060.746 ; gain = 50.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll/sys_pll_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {d:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll/sys_pll_in_context.xdc}, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for fifo_generator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_processing/image_gaussian_filter/gaussian_window/gaussian_window_shift_ram_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for sys_pll. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for display_demo_dvi/hdmi_framebuffer/framebuffer_ram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_processing/edge_detector/window/window_shift_ram_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_processing/edge_detector/window/window_shift_ram_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for display_demo_dvi/hdmi_edge_framebuffer/edge_framebuffer_ram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for edge_detector_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_processing/sobel_threshold_fifo. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1060.746 ; gain = 50.051
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sccb_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'camera_init'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hdmi_framebuffer'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hdmi_edge_framebuffer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+               START_BIT |                            00010 |                              001
+                    DATA |                            00100 |                              010
+                STOP_BIT |                            01000 |                              011
+               SAVE_DATA |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+                   START |                            10000 |                              001
+                   PHASE |                            01000 |                              010
+               PHASE_ACK |                            00100 |                              011
+                    STOP |                            00010 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'sccb_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+             START_PAUSE |                              001 |                              001
+            SEND_MESSAGE |                              010 |                              010
+         MESSAGE_TX_WAIT |                              011 |                              011
+        INC_MESSAGE_ADDR |                              100 |                              100
+                TX_PAUSE |                              101 |                              101
+               END_PAUSE |                              110 |                              110
+        CAMERA_INIT_DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'camera_init'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+              WAIT_WDATA |                               01 |                               01
+                SET_DATA |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'hdmi_framebuffer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+              WAIT_WDATA |                               01 |                               01
+                SET_DATA |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'hdmi_edge_framebuffer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1060.746 ; gain = 50.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   19 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input   14 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 1     
+	   3 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 3     
+	   3 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
+	   8 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	  10 Input    5 Bit       Adders := 3     
+	  12 Input    5 Bit       Adders := 3     
+	   4 Input    5 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 4     
+	   8 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 98    
+	   3 Input      1 Bit         XORs := 10    
++---Registers : 
+	               19 Bit    Registers := 3     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 10    
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 56    
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 50    
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   19 Bit        Muxes := 3     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 12    
+	   5 Input   10 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 7     
+	   4 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 24    
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 10    
+	   4 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 9     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 62    
+	   3 Input    1 Bit        Muxes := 9     
+	   5 Input    1 Bit        Muxes := 12    
+	   8 Input    1 Bit        Muxes := 10    
+	  11 Input    1 Bit        Muxes := 5     
+	   9 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP sobel_edge_detector/Gx_pow2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register sobel_edge_detector/Gx_reg is absorbed into DSP sobel_edge_detector/Gx_pow2_reg.
+DSP Report: register sobel_edge_detector/Gx_reg is absorbed into DSP sobel_edge_detector/Gx_pow2_reg.
+DSP Report: register sobel_edge_detector/Gx_pow2_reg is absorbed into DSP sobel_edge_detector/Gx_pow2_reg.
+DSP Report: operator sobel_edge_detector/Gx_pow20 is absorbed into DSP sobel_edge_detector/Gx_pow2_reg.
+DSP Report: Generating DSP sobel_edge_detector/G_pow2_reg, operation Mode is: (PCIN+(A2*B2)')'.
+DSP Report: register sobel_edge_detector/Gy_reg is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: register sobel_edge_detector/Gy_reg is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: register sobel_edge_detector/G_pow2_reg is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: register sobel_edge_detector/Gy_pow2_reg is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: operator sobel_edge_detector/G_pow20 is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: operator sobel_edge_detector/Gy_pow20 is absorbed into DSP sobel_edge_detector/G_pow2_reg.
+DSP Report: Generating DSP rgb565_to_rgb888/r_res_reg, operation Mode is: (C:0x17)+((A:0x20f)*B2)'.
+DSP Report: register rgb565_to_rgb888/r_5_reg_reg is absorbed into DSP rgb565_to_rgb888/r_res_reg.
+DSP Report: register rgb565_to_rgb888/r_res_reg is absorbed into DSP rgb565_to_rgb888/r_res_reg.
+DSP Report: register rgb565_to_rgb888/r_buf_reg is absorbed into DSP rgb565_to_rgb888/r_res_reg.
+DSP Report: operator rgb565_to_rgb888/r_res0 is absorbed into DSP rgb565_to_rgb888/r_res_reg.
+DSP Report: operator rgb565_to_rgb888/r_buf0 is absorbed into DSP rgb565_to_rgb888/r_res_reg.
+DSP Report: Generating DSP rgb565_to_rgb888/b_res_reg, operation Mode is: (C:0x16)+((A:0x20f)*B2)'.
+DSP Report: register rgb565_to_rgb888/b_5_reg_reg is absorbed into DSP rgb565_to_rgb888/b_res_reg.
+DSP Report: register rgb565_to_rgb888/b_res_reg is absorbed into DSP rgb565_to_rgb888/b_res_reg.
+DSP Report: register rgb565_to_rgb888/b_buf_reg is absorbed into DSP rgb565_to_rgb888/b_res_reg.
+DSP Report: operator rgb565_to_rgb888/b_res0 is absorbed into DSP rgb565_to_rgb888/b_res_reg.
+DSP Report: operator rgb565_to_rgb888/b_buf0 is absorbed into DSP rgb565_to_rgb888/b_res_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1060.746 ; gain = 50.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------------+---------------------------------------------+---------------+----------------+
+|Module Name       | RTL Object                                  | Depth x Width | Implemented As | 
++------------------+---------------------------------------------+---------------+----------------+
+|camera_controller | camera_init_messages_rom/message_data_o_reg | 128x16        | Block RAM      | 
++------------------+---------------------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sobel_edge_detector | (A2*B2)'                 | 11     | 11     | -      | -      | 22     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|sobel_edge_detector | (PCIN+(A2*B2)')'         | 11     | 11     | -      | -      | 22     | 1    | 1    | -    | -    | -     | 1    | 1    | 
+|rgb565_to_rgb888    | (C:0x17)+((A:0x20f)*B2)' | 5      | 10     | 5      | -      | 14     | 1    | 0    | 0    | -    | -     | 1    | 1    | 
+|rgb565_to_rgb888    | (C:0x16)+((A:0x20f)*B2)' | 5      | 10     | 5      | -      | 14     | 1    | 0    | 0    | -    | -     | 1    | 1    | 
++--------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1071.898 ; gain = 61.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1076.688 ; gain = 65.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance video_processing/camera_controller/camera_init_messages_rom/message_data_o_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1126.227 ; gain = 115.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.445 ; gain = 130.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.445 ; gain = 130.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.445 ; gain = 130.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.445 ; gain = 130.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.645 ; gain = 130.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.645 ; gain = 130.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | video_processing/image_gaussian_filter/gaussian_filter/delay_rdy_reg[2] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top         | video_processing/edge_detector/sobel_edge_detector/delay_rdy_reg[5]     | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top         | video_processing/delay_eof_reg[5]                                       | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top         | video_processing/delay_sof_reg[5]                                       | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|top         | video_processing/delay_rdy_reg[5]                                       | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------+----------+
+|      |BlackBox name             |Instances |
++------+--------------------------+----------+
+|1     |sys_pll                   |         1|
+|2     |fifo_generator_0          |         1|
+|3     |edge_detector_fifo        |         1|
+|4     |edge_framebuffer_ram      |         1|
+|5     |blk_mem_gen_0             |         1|
+|6     |sobel_threshold_fifo      |         1|
+|7     |window_shift_ram          |         2|
+|8     |gaussian_window_shift_ram |         2|
++------+--------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |blk_mem_gen                |     1|
+|2     |edge_detector_fifo         |     1|
+|3     |edge_framebuffer_ram       |     1|
+|4     |fifo_generator             |     1|
+|5     |gaussian_window_shift_ram  |     1|
+|6     |gaussian_window_shift_ram_ |     1|
+|7     |sobel_threshold_fifo       |     1|
+|8     |sys_pll                    |     1|
+|9     |window_shift_ram           |     1|
+|10    |window_shift_ram_          |     1|
+|11    |BUFG                       |     1|
+|12    |CARRY4                     |   127|
+|13    |DSP48E1                    |     4|
+|16    |LUT1                       |    48|
+|17    |LUT2                       |   253|
+|18    |LUT3                       |   173|
+|19    |LUT4                       |   232|
+|20    |LUT5                       |   148|
+|21    |LUT6                       |   249|
+|22    |MUXF7                      |     6|
+|23    |OSERDESE2                  |     8|
+|25    |RAMB18E1                   |     1|
+|26    |SRL16E                     |     5|
+|27    |FDCE                       |   337|
+|28    |FDPE                       |    18|
+|29    |FDRE                       |   640|
+|30    |FDSE                       |    43|
+|31    |IBUF                       |    14|
+|32    |IOBUF                      |     1|
+|33    |OBUF                       |    10|
+|34    |OBUFDS                     |     4|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.645 ; gain = 130.949
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1141.645 ; gain = 80.898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1141.645 ; gain = 130.949
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1150.301 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+140 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1151.078 ; gain = 140.383
+INFO: [Common 17-1381] The checkpoint 'D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  4 02:47:21 2022...

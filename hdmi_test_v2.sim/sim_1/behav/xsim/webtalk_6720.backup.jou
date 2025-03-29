@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep  3 22:10:45 2022
+# Process ID: 6720
+# Current directory: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/User/FPGA Projects/hdmi_test_v2/hdmi_test_v2.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/User/FPGA -notrace

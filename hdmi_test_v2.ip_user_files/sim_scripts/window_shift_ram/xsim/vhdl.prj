@@ -1,0 +1,19 @@
+vhdl xpm  \
+"D:/Programs/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vhdl xbip_utils_v3_0_10  \
+"../../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vhdl c_reg_fd_v12_0_6  \
+"../../../ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd" \
+
+vhdl c_mux_bit_v12_0_6  \
+"../../../ipstatic/hdl/c_mux_bit_v12_0_vh_rfs.vhd" \
+
+vhdl c_shift_ram_v12_0_14  \
+"../../../ipstatic/hdl/c_shift_ram_v12_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../hdmi_test_v2.gen/sources_1/ip/window_shift_ram/sim/window_shift_ram.vhd" \
+
+nosort

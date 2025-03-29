@@ -1,0 +1,56 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hdmi_test_v2.gen/sources_1/ip/sys_pll" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/edge_detector_fifo/sim/edge_detector_fifo.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/edge_framebuffer_ram/sim/edge_framebuffer_ram.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/sobel_threshold_fifo/sim/sobel_threshold_fifo.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll_clk_wiz.v" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/sys_pll/sys_pll.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSM.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMA.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMB.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMC.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSMD.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/CSME.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/SqrtBinary.v" \
+"../../../../async_reset.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/baud_generator.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/camera_capture.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/camera_controller.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/camera_init.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/camera_init_messages_rom.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/cmd_controller.v" \
+"../../../../display_demo_dvi.v" \
+"../../../../display_timings.v" \
+"../../../../dvi_generator.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/edge_detector.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/gaussian_filter.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/gaussian_window.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/hdmi_edge_framebuffer.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/hdmi_framebuffer.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/image_gaussian_filter.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/ov7670.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/read_edge_fifo_interface.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/read_fifo_interface.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/rgb565_to_rgb888.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/rgb888_to_gray.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/sccb_master.v" \
+"../../../../serializer_10to1.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/sobel_edge_detector.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/timer.v" \
+"../../../../tmds_encoder_dvi.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/top.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/uart.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/uart_rx.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/uart_tx.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/video_processing.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/window.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/write_fifo_interface.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

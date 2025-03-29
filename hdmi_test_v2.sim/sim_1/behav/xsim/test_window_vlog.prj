@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hdmi_test_v2.gen/sources_1/ip/sys_pll" \
+"../../../../hdmi_test_v2.gen/sources_1/ip/edge_detector_fifo/sim/edge_detector_fifo.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/read_edge_fifo_interface.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/sobel_edge_detector.v" \
+"../../../../hdmi_test_v2.srcs/sources_1/new/window.v" \
+"../../../../hdmi_test_v2.srcs/sim_1/new/test_window.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
